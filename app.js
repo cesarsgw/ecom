@@ -18,7 +18,7 @@ function renderGrid() {
   const list = PRODUCTS.filter(p => filter === 'Tous' || p.cat === filter);
   $('#grid').innerHTML = list.map(p => `
     <article class="card">
-      <div class="thumb" data-view="${p.id}">${p.badge ? `<span class="badge">${p.badge}</span>` : ''}${imgTag(p)}</div>
+      <div class="thumb" data-view="${p.id}" data-name="${p.name}">${p.badge ? `<span class="badge">${p.badge}</span>` : ''}${imgTag(p)}</div>
       <div class="info">
         <span class="cat">${p.cat}</span>
         <h3>${p.name}</h3>
